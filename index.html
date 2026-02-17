@@ -25,7 +25,6 @@
       margin:0;padding:0;
       font-family: 'Montserrat', sans-serif;
       /* CONFIGURATION DU FOND GLOBAL */
-      /* MODIFICATION ICI : Opacité réduite (0.6 et 0.7) pour mieux voir la photo */
       background: 
         linear-gradient(rgba(15, 25, 35, 0.6), rgba(15, 25, 35, 0.7)), 
         url('Visuel.jpg');
@@ -54,7 +53,8 @@
         background: transparent; /* Fond transparent pour voir l'image */
     }
     
-    .logo img{height:120px;width:auto;display:block;} 
+    /* MODIFICATION ICI : Taille augmentée pour Desktop (160px au lieu de 120px) */
+    .logo img{height:240px;width:auto;display:block;} 
     
     .header-ctas{display:flex;gap:12px;flex-wrap:wrap}
 
@@ -102,7 +102,6 @@
     /* HERO SECTION */
     .hero{
       display:grid;
-      /* MODIFICATION ICI : Colonnes ajustées (2fr pour le texte, 1fr pour la carte) pour réduire la largeur de la carte */
       grid-template-columns: 2fr 1fr;
       gap:40px;
       align-items:center;
@@ -127,7 +126,7 @@
       line-height: 1.6;
       max-width: 90%;
       margin-bottom: 30px;
-      text-shadow: 0 2px 4px rgba(0,0,0,0.5); /* Ajout d'une ombre légère pour lisibilité sur fond clair */
+      text-shadow: 0 2px 4px rgba(0,0,0,0.5); 
     }
 
     .hero-actions{display:flex;gap:14px;flex-wrap:wrap;margin-top:24px}
@@ -323,6 +322,8 @@
     /* RESPONSIVE */
     @media (max-width: 980px){
       header{flex-direction:column;align-items:flex-start; gap: 15px;}
+      
+      /* MODIFICATION : Ici, on s'assure que sur mobile le logo reste plus petit (80px) */
       .logo img{height:80px}
       
       .hero{
